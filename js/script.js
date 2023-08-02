@@ -114,4 +114,23 @@ areas.forEach(item=>{
         }
     }
 })
+
+window.onscroll=function(){
+    let navElement=document.querySelector("nav");
+    let linkElement=document.querySelectorAll("nav a");
+    if(document.documentElement.scrollTop>100||document.body.scrollTop>100){
+        navElement.style.background="cyan";
+        navElement.style.padding="30px";
+        linkElement.forEach(item=>{
+            item.style.color="black";
+        })
+    }
+    else{
+        navElement.style.background="orange";
+        navElement.style.padding="20px";
+        linkElement.forEach(item=>{
+            item.style.color="white";
+        })
+    }
+}
   
